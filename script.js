@@ -5,6 +5,7 @@ console.log('JavaScript file loaded :) Testing IndexedDB database setup:');
 // https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
 
 const DB_NAME = "setup-test";
+const DB_VERSION = 1;
 
 // IIFE!!! If no browser support, don't run any of the code in this function
 (function() {
@@ -23,7 +24,7 @@ const DB_NAME = "setup-test";
       // indexedDB.open(name, version);
           // RETURNS: A IDBOpenDBRequest object on which subsequent events related to this request are fired.
           // https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest
-  var openDbRequest = window.indexedDB.open(DB_NAME, 1);    
+  var openDbRequest = window.indexedDB.open(DB_NAME, DB_VERSION);    
   console.log("Created openDbRequest:");
   console.log(openDbRequest);
   
